@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffaf5;
+    color: #252525;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: white;
+}
+
+header h2 {
+    color: #f06432;
+    font-size: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background-color: #f06432;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #fff0e6, #ffe0cc);
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Other Sections */
+section:not(.hero) {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin-top: 12px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+/* Features Cards Design */
+
+.features {
+    background-color: #ffffff;
+}
+
+.section-desc {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.feature-card {
+    background-color: #fff7f0;
+    padding: 35px 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card h3 {
+    color: #f06432;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.how-section {
+    background-color: #fffaf5;
+}
+
+.how-section .feature-card {
+    border: 1px solid #ffe0cc;
+}
+
+.how-section .feature-card h3 {
+    font-size: 20px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+}
